@@ -1,0 +1,41 @@
+@{
+    ViewBag.Title = "Global Microsoft 365 Developer Bootcamp 2019 Japan";
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="text-center">
+            <h1>@ViewBag.Title</h1>
+        </div>
+        @if (TempData["Message"] != null)
+        {
+            
+            <div class="alert alert-info" role="alert">
+                @TempData["Message"]
+            </div>
+        }
+        @if (ViewBag.IsSignIn)
+        {
+            using (@Html.BeginForm(FormMethod.Post))
+            {
+                <div class="form-group">
+                    <label for="payload">Send To</label>
+                    <div class="form-control-static">@ViewBag.DisplayName (@ViewBag.Mail)</div>
+                </div>
+                <div class="form-group">
+                    <label for="payload">Adaptive Cards Payload (JSON format)</label>
+                    <textarea id="payload" name="payload" class="form-control" rows="10"></textarea>
+                </div>
+                <div class="form-group text-right">
+                    <input type="submit" class="btn btn-primary" value="Send">
+                    <input type="reset" class="btn btn-default" value="Reset">
+                </div>
+            }
+        }
+        else
+        {
+            <div class="text-center">
+                <a asp-controller="Account" asp-action="Authorize"><img src="~/images/signin.svg" alt="Sign in with Microsoft" /></a>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,58 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "名前"
+        },
+        {
+            "type": "Input.Text",
+            "spacing": "Small",
+            "id": "name"
+        },
+        {
+            "type": "TextBlock",
+            "text": "評価"
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "choices": [
+                {
+                    "title": "良かった",
+                    "value": "良かった"
+                },
+                {
+                    "title": "悪かった",
+                    "value": "悪かった"
+                },
+                {
+                    "title": "どちらでもない",
+                    "value": "どちらでもない"
+                }
+            ],
+            "style": "expanded",
+            "spacing": "Small",
+            "id": "rating"
+        },
+        {
+            "type": "TextBlock",
+            "text": "コメント"
+        },
+        {
+            "type": "Input.Text",
+            "spacing": "Small",
+            "isMultiline": true,
+            "id": "comment"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "actions": [
+        {
+            "type": "Action.Http",
+            "title": "回答する",
+            "method": "POST",
+            "body": "{\"name\":\"{{name.value}}\",\"rating\":\"{{rating.value}}\",\"comment\":\"{{comment.value}}\"}"
+        }
+    ]
+}

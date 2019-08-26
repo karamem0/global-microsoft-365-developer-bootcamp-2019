@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaptiveCardsSend", "AdaptiveCardsSend.csproj", "{789E7E0E-397E-48EF-8A53-9D7A42A68F54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{789E7E0E-397E-48EF-8A53-9D7A42A68F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{789E7E0E-397E-48EF-8A53-9D7A42A68F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{789E7E0E-397E-48EF-8A53-9D7A42A68F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{789E7E0E-397E-48EF-8A53-9D7A42A68F54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CBF6E9E-7C15-4DB1-8774-5B191EB0DFBF}
+	EndGlobalSection
+EndGlobal
